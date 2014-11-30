@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,9 +8,10 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,900' rel='stylesheet' type='text/css'>    
-    <link rel="stylesheet" type="text/css" href="Stylesheet/mystyle.css">        
+    <link rel="stylesheet" type="text/css" href="Stylesheet/mystyle.css"> 
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="myJs/organizePortfolio.js"></script>       
   </head>
-
 
   <body>
     <!-- some text -->
@@ -41,86 +41,11 @@
         </div>
       </div>        
 
-      <!-- First line -->
-      <div class="row">
-        <p>
-          <a href="http://bl.ocks.org/ucaiado/566acab3d58c8655eccf">
-            <div class="col-md-4 col-md-offset-2"> U.S. Smartphone Market</div>
-          </a>          
-          <div class="col-md-3 col-md-offset-1 text-right"><span class="date">November 23, 2014</span></div>
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <a href="http://bl.ocks.org/ucaiado/566acab3d58c8655eccf" class="thumbnail">
-            <img src="images/UD_DataVis_example.png" alt="smartphone mkt share">
-          </a>
-        </div>
-      </div>
-
-      <!-- Second line -->   
-
-      <div class="row">
-        <p>
-          <a href="http://bl.ocks.org/ucaiado/eae80bab06895b1d4691">
-            <div class="col-md-4 col-md-offset-2"> U.S. unemployment rate 2011</div>
-          </a>              
-          
-          <div class="col-md-3 col-md-offset-1 text-right"><span class="date">November 23, 2014</span></div>
-        </p>
-      </div>       
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">    
-          <a href="http://bl.ocks.org/ucaiado/eae80bab06895b1d4691" class="thumbnail">
-            <img src="images/UD_DataVix_lesson3.png" alt="unemployment rate">
-          </a>
-        </div>
-      </div>
-
-
-  
-
-
-      <!-- Third line -->  
-
-      <div class="row">
-        <p>
-          <a href="https://www.dropbox.com/s/9txjji0ewh6snn0/Final_Project_UIRACAIADO_v2.html?raw=1">
-            <div class="col-md-4 col-md-offset-2">Predicting House Prices</div>
-          </a>           
-          <div class="col-md-3 col-md-offset-1 text-right"><span class="date">May 26, 2014</span></div>
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <a href="https://www.dropbox.com/s/9txjji0ewh6snn0/Final_Project_UIRACAIADO_v2.html?raw=1" class="thumbnail">
-            <img class="img-responsive" src="images/UD_GT_machine_learning_1.png" alt="house prices">
-          </a>
-        </div>
-      </div>
-
-      <!-- Fourth line -->  
-
-      <div class="row">
-        <p>
-          <a href="https://www.dropbox.com/s/a6cn6fz0ifcss7l/Final_Project-v3.html?raw=1">
-            <div class="col-md-4 col-md-offset-2">Take a Look at MTA Subway System</div>
-          </a>          
-          <div class="col-md-3 col-md-offset-1 text-right"><span class="date">March 24, 2014</span></div>
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <a href="https://www.dropbox.com/s/a6cn6fz0ifcss7l/Final_Project-v3.html?raw=1" class="thumbnail">
-            <img class="img-responsive" src="images/UD_introDS.png" alt="MTA Subway">
-          </a>
-        </div>
-      </div>  
-                    
+      <!-- My projects -->
+      <div id="myProject"></div>
+      <script type="text/javascript">
+        d3.json("myPortfolio.json", draw);
+      </script>                    
 
 
       <!-- blanck line -->  
@@ -183,17 +108,10 @@
       </script>
     </div>      
   </body>
-  <!-- <script async src="//www.google-analytics.com/analytics.js"></script> -->
+
+
+
 </html>
-
-
-
-
-
-
-
-
-
 
 
 

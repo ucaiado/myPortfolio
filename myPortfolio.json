@@ -1,0 +1,34 @@
+[
+	{"date": "November 23, 2014",
+	 "title":"U.S. Smartphone Market",
+	 "link":"http://bl.ocks.org/ucaiado/566acab3d58c8655eccf",
+	 "imgSrc":"images/UD_DataVis_example.png",
+	 "imgAlt":"smartphone mkt share"
+	},
+
+	{"date": "November 23, 2014",
+	 "title":"U.S. unemployment rate",
+	 "link":"http://bl.ocks.org/ucaiado/eae80bab06895b1d4691",
+	 "imgSrc":"images/UD_DataVix_lesson3.png",
+	 "imgAlt":"unemployment rate"
+	},
+
+	{"date": "May 26, 2014",
+	 "title":"Predicting House Prices",
+	 "link":"https://www.dropbox.com/s/9txjji0ewh6snn0/Final_Project_UIRACAIADO_v2.html?raw=1",
+	 "imgSrc":"images/UD_GT_machine_learning_1.png",
+	 "imgAlt":"house prices"
+	},
+
+	{"date": "March 24, 2014",
+	 "title":"Take a Look at MTA Subway System",
+	 "link":"https://www.dropbox.com/s/a6cn6fz0ifcss7l/Final_Project-v3.html?raw=1",
+	 "imgSrc":"images/UD_IntroDS.png",
+	 "imgAlt":"MTA Subway"
+	}
+
+
+
+]
+
+    
