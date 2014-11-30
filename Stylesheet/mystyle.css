@@ -1,0 +1,64 @@
+.date {
+  color: #636363;
+  font-size: smaller;
+
+}
+
+.thumbnail {
+  padding: 0;
+  max-width: 724px;
+/*        max-height: 84px;*/
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #fcfcfa;
+  color: #333;
+  padding-top: 70px;
+}      
+
+h1{
+  font-weight: 300;
+  font-size: 60px;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+h1, h2 {
+  text-rendering: optimizeLegibility;
+}
+
+h2 a[name],
+h2 a[id],
+h1 a[name],
+h1 a[id] {
+  color: #ccc;
+  right: 100%;
+  padding: 0 .3em;
+  position: absolute;
+}      
+
+h1, h2 {
+  text-rendering: optimizeLegibility;
+}      
+
+html, body {
+  height: 100%;
+}
+
+footer {
+  font-size: small;
+  margin-top: 8em;
+}
+
+footer aside {
+  float: left;
+  margin-right: .5em;
+}
+
+footer aside:after {
+  padding-left: .5em;
+  content: "/";
+}
