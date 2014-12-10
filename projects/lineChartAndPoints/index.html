@@ -4,25 +4,85 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>...</title>
+  <title>Line Chart and Points</title>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <!-- JS and CSS files to highlight code blocks-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
+  <link rel="stylesheet" type="text/css" href="../../Stylesheet/mystyle.css"> 
+  <link rel="stylesheet" type="text/css" href="chart.css">
+  <script type="text/javascript" src="chart.js"></script> 
 
-  <link rel="stylesheet" type="text/css" href="myStyle.css">
-  <script type="text/javascript" src="test1.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 
 <body>
 
 	<div class="container">
+
+
+    <!-- some text -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-md-offset-2">
+          <h2><a name="talks" href="#talks">#</a>Plotting a Line Chart Highlighting some Points</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-justify">       
+ 
+
+          <p>Below I plotted the intraday market price from a brazilian asset using D3.js library and I pointed out some random trades using triangles. Some of those trades were purchase and others sale. Some made money and others were lost it.</p>
+
+          <p>I included several D3 features in this chart to encode all those informations and, following the example given by this nice <a href="http://www.targetprocess.com/articles/visual-encoding.html">post</a>, I tried to describe what I did and why I did it in the table below:<p> 
+
+          <p>TODO:</p>
+          <ol>
+	          <li>write table</li>
+
+	          <li>include sketch</li>
+
+	          <li>pointed some interesting code that I included as the auto re-scale and the zoom behaviour.</li>
+
+	          <li>list the sources</li>
+	          <li>Include context to the chart (axis titles, legend, commet about the zomming)</li>
+      	  </ol>
+
+
+          <p>You can check the code source on my<a href="https://github.com/ucaiado/myPortfolio/tree/gh-pages/projects/lineChartAndPoints"> GitHub</a>.</p>
+
+          <!-- <p> bla bla bla.</p> -->
+
+          
+
+        </div>
+      </div>
+
+	<!-- the thin row after de header -->
+	<div class="row">
+	    <div class="col-md-12">
+	        <hr>
+	    </div>
+	</div>
+      
+      <!-- my header -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          
+          <p></p>
+        </div>
+      </div>  
+
+
+
+
 		<div class="row  text-rigth">
 		  <!-- <div class = "col-md-8 col-md-offset-2"> -->
 		  <div class = "col-md-6 col-md-offset-4">
@@ -36,15 +96,54 @@
 		  <div class = "col-md-12">
 		    <div id = "MktCurve"\></div>
 		  </div>
-		</div><!-- end container -->
-	</div>
+		</div>
+
+
+      <!-- blanck line -->  
+      <div id="main" class="container clear-top">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-left">
+          </div>
+        </div>
+      </div>
+
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../"><b>Uirá Caiado</b></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              
+              <li><a href="https://github.com/ucaiado" class="navbar-link">my GitHub</a></li>
+              <li><a href="http://bl.ocks.org/ucaiado" class="navbar-link">my bl.ocks</a></li>
+              <li class="active"><a href="http://br.linkedin.com/in/ucaiado" class="navbar-link"> my LinkedIn</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>    
+	
+
+      <footer>
+        <aside>2014</aside>
+          Built by <a href="http://br.linkedin.com/in/ucaiado">Uirá Caiado</a> using <a href="http://getbootstrap.com">Boostrap</a>.
+      </footer>
+
+	</div><!-- end container -->
 
 
 	<script type="text/javascript">  
 	//set the parser to date / time
 	format = d3.time.format("%Y-%m-%d %H:%M:%S.%L");
 
-	d3.csv("/data/df_marks.csv", function(d) {
+	d3.csv("data/df_marks.csv", function(d) {
 	  // transform data
 	  var str = d['DATE'];
 	  if (str.length<20){
@@ -63,5 +162,8 @@
 	  },//end transform data
 	  draw);
 	</script>
+
+
+
 </body>
 </html>
