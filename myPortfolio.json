@@ -1,4 +1,11 @@
 [
+	{"date": "December 10, 2014",
+	 "title":"Line Chart Highlighting Some Points",
+	 "link":"projects/lineChartAndPoints/index.html",
+	 "imgSrc":"images/WK_line_and_points_chart.png",
+	 "imgAlt":"line cht & points"
+	},
+
 	{"date": "November 23, 2014",
 	 "title":"U.S. Smartphone Market",
 	 "link":"http://bl.ocks.org/ucaiado/566acab3d58c8655eccf",
