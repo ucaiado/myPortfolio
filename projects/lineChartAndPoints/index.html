@@ -18,71 +18,22 @@
   <link rel="stylesheet" type="text/css" href="chart.css">
   <script type="text/javascript" src="chart.js"></script> 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
+
+	<!-- some text -->
 	<div class="container">
-
-
-    <!-- some text -->
-    <div class="container">
+	  
       <div class="row">
         <div class="col-md-9 col-md-offset-2">
-          <h2><a name="talks" href="#talks">#</a>Plotting a Line Chart Highlighting some Points</h2>
+          <h1>My First Line Chart !</h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-justify">       
- 
-
-          <p>Below I plotted the intraday market price from a brazilian asset using D3.js library and I pointed out some random trades using triangles. Some of those trades were purchase and others sale. Some made money and others were lost it.</p>
-
-          <p>I included several D3 features in this chart to encode all those informations and, following the example given by this nice <a href="http://www.targetprocess.com/articles/visual-encoding.html">post</a>, I tried to describe what I did and why I did it in the table below:<p> 
-
-          <p>TODO:</p>
-          <ol>
-	          <li>write table</li>
-
-	          <li>include sketch</li>
-
-	          <li>pointed some interesting code that I included as the auto re-scale and the zoom behaviour.</li>
-
-	          <li>list the sources</li>
-	          <li>Include context to the chart (axis titles, legend, commet about the zomming)</li>
-      	  </ol>
-
-
-          <p>You can check the code source on my<a href="https://github.com/ucaiado/myPortfolio/tree/gh-pages/projects/lineChartAndPoints"> GitHub</a>.</p>
-
-          <!-- <p> bla bla bla.</p> -->
-
-          
-
-        </div>
-      </div>
-
-	<!-- the thin row after de header -->
-	<div class="row">
-	    <div class="col-md-12">
-	        <hr>
-	    </div>
-	</div>
-      
-      <!-- my header -->
-      <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-          
-          <p></p>
-        </div>
-      </div>  
-
-
-
-
+      <!-- my chart -->
 		<div class="row  text-rigth">
 		  <!-- <div class = "col-md-8 col-md-offset-2"> -->
 		  <div class = "col-md-6 col-md-offset-4">
@@ -97,6 +48,139 @@
 		    <div id = "MktCurve"\></div>
 		  </div>
 		</div>
+
+
+	 <!-- description -->
+
+	  <div class="row">
+	    <div class="col-md-9 col-md-offset-2">
+	      <h2><a name="talks" href="#talks">#</a>Summary</h2>
+	    </div>
+	  </div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-justify">       
+
+				<p>The data used to plot the chart bellow shows some simulated trades made by an algorithmic strategy in a brazilian stock asset. The data includes the intraday market price of this asset, the  purchases and sales made throughout the day, and if each trade made money or not. All these information is organized by hour.<p>
+
+				<p>I decided to plot the market price using a line chart since the dataset is a time series. Following the examples given by this <a href="http://www.targetprocess.com/articles/visual-encoding.html">article</a>, I described how each information was encoded in the next session.</p>
+
+				<p>I would like to allow the reader explores each trade made by the strategy and, at the same time, get a sense of how well the stategy was that day, even though without plotting a <a href="http://www.investopedia.com/terms/p/plstatement.asp">P&L</a> Line Chart.</p>
+
+				<p>This chart was made using D3.js library and I included several features to help the user visualize better all the informations. You can check the code source on my<a href="https://github.com/ucaiado/myPortfolio/tree/gh-pages/projects/lineChartAndPoints"> GitHub</a>.</p>
+			</div>
+		</div>
+
+
+	  <div class="row">
+	    <div class="col-md-9 col-md-offset-2">
+	      <h2><a name="talks" href="#talks">#</a>Design</h2>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-md-8 col-md-offset-2 text-justify">       
+			
+	      <p>I made a natural decision to encode the data about the Price and Time, as far as it is a time-series. The trade was enconded as triangles to show if it was a Buy(up) or a Sell (down). As I would like to highlight the performance that day, I colored when each trade made money (green) or not (red).</p>
+
+	      <p>Since there are many data encoded at this chart, I included gridlines to help the reader norrowing the focus  to some areas, as sugested on this <a href="http://www.perceptualedge.com/articles/dmreview/grid_lines.pdf">article</a>. I also included a zoom behaviour to allow the reader explore better the data.</p>
+
+		</div>
+	  </div>
+
+	  <div class="row">	  
+		<div class="col-md-8 col-md-offset-2 text-justify"> 
+
+			<div class="table-responsive">
+				<table class="table table-hover table-condensed">
+					<thead>
+						<tr>
+							<td><b>Variable</b></td>
+							<td><b>Type</b></td>
+							<td><b>Encoding</b></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Market Price</td>
+							<td>Quantitative</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>Date / Time</td>
+							<td>Ordered</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>About each Trade: Price</td>
+							<td>Quantitative</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>About each Trade: Time</td>
+							<td>Ordered</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>About each Trade: Buy or Sell</td>
+							<td>Categorical</td>
+							<td>Shape</td>
+						</tr>
+						<tr>
+							<td>About each Trade: Made Money?</td>
+							<td>Categorical</td>
+							<td>Color Hue</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+	    </div>
+	  </div>
+
+
+	  <div class="row">
+	    <div class="col-md-9 col-md-offset-2">
+	      <h2><a name="talks" href="#talks">#</a>Resources</h2>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-md-8 col-md-offset-2 text-justify">       
+
+	      <ol>
+			<li><a href="http://bl.ocks.org/mbostock/3892928">Here</a> is how I dealt with the D3 zoom behavior;</li>
+			<li><a href="http://bost.ocks.org/mike/path/">Here</a> is where I understood why use a clip path;</li>
+			<li>I learned how to limiting the Zoom and Pan on this <a href="http://bl.ocks.org/garrilla/11280861">bl.ock</a>;</li>
+			<li>I learned how to deal with grid lines <a href="http://stackoverflow.com/questions/15580300/proper-way-to-draw-gridlines">here</a>;</li>
+			<li>I learned how to draw triangles <a href="http://bl.ocks.org/mbostock/3244058">here</a>;</li>
+			<li>And finally, I understood how to rescale my SVG <a href="http://jsfiddle.net/BTfmH/12/">here</a>;</li>
+			<li>I didn't use it, but <a hre="http://bl.ocks.org/mbostock/8033015">it</a> is really nice =).</li>
+	  	  </ol>
+	    </div>
+	  </div>
+
+
+
+
+
+
+
+	  <div class="row">
+	    <div class="col-md-9 col-md-offset-2">
+	      <h2><a name="talks" href="#talks">#</a>TODO</h2>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-md-8 col-md-offset-2 text-justify">       
+	      <ol>
+	          <li>include sketch</li>
+	          <li>point some interesting code that I included as the auto re-scale and the zoom behaviour.</li>
+	          <li>Include context to the chart (legend)</li>
+	  	  </ol>
+	    </div>
+	  </div>
 
 
       <!-- blanck line -->  
@@ -117,7 +201,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../../"><b>Uirá Caiado</b></a>
+            <a class="navbar-brand" href="#"><b>Uirá Caiado</b></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -128,8 +212,7 @@
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </nav>    
-	
+      </nav>          
 
       <footer>
         <aside>2014</aside>
@@ -163,6 +246,11 @@
 	  draw);
 	</script>
 
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 </body>

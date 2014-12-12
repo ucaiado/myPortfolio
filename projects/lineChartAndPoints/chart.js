@@ -257,8 +257,14 @@ function draw(data) {
     .call(xAxis);
 
   svg.append("g")
-    .attr("class", "y axis")
-    .call(yAxis);  
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Price");  
   
   // Add the line path and plot the data
   var myline  = svg.append("path")  
@@ -280,6 +286,8 @@ function draw(data) {
   
   myPoints.attr("d", allTriangles(data));
     
+
+
       
   //call reset function      
   d3.select(".reset").on("click", reset);  
