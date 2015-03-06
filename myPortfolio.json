@@ -1,4 +1,11 @@
 [
+	{"date": "March 06, 2015",
+	 "title":"Data Wrangle XML file using Mongo DB and python",
+	 "link":"http://nbviewer.ipython.org/github/ucaiado/OpenStreetMaps/blob/master/final_Project_UIRACAIADO_v1.ipynb",
+	 "imgSrc":"images/UD_DataWrangle_finalProject.png",
+	 "imgAlt":"data wrangle XML file"
+	},
+
 	{"date": "December 10, 2014",
 	 "title":"Line Chart Highlighting Some Points",
 	 "link":"projects/lineChartAndPoints/index.html",
